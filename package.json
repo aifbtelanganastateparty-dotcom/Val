@@ -10,6 +10,9 @@
     "install:next": "cd next && npm install",
     "postinstall": "cd next && npm install"
   },
+  "dependencies": {
+    "next": "^15.0.0"
+  },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"
