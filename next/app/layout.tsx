@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   description:
     'We help businesses leverage cutting-edge technology to drive growth, improve efficiency, and stay ahead of the competition.',
   keywords: 'AI, ML, Cloud Consulting, Data Engineering, Web Development',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     title: 'ValuStrat - Transforming Businesses with Innovative Technology',
     description:

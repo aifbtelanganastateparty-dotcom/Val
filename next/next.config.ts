@@ -33,6 +33,18 @@ const nextConfig: NextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return [
+      {
+        source: '/%PUBLIC_URL%/favicon.ico',
+        destination: '/favicon.ico',
+      },
+      {
+        source: '/%25PUBLIC_URL%25/favicon.ico',
+        destination: '/favicon.ico',
+      },
+    ]
+  },
   compress: true,
 }
 
