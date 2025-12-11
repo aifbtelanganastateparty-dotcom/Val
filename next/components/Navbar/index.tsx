@@ -22,6 +22,8 @@ const Navbar = () => {
   }, [])
 
   useEffect(() => {
+    // Close menu when route changes
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsOpen(false)
   }, [pathname])
 

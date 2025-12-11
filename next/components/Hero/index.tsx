@@ -9,7 +9,7 @@ const Hero = () => {
   const ref = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isVideoReady, setIsVideoReady] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
+  const [isMounted] = useState(true)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"]
@@ -17,10 +17,6 @@ const Hero = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
 
   useEffect(() => {
     const videoEl = videoRef.current
@@ -41,9 +37,7 @@ const Hero = () => {
       }
     }
 
-    if (videoEl.readyState >= 2) {
-      setIsVideoReady(true)
-    } else {
+    if (videoEl.readyState < 2) {
       attemptPlay()
     }
   }, [])
